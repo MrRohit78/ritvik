@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons - LangLearn</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/lessons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand" onclick="location.href='../index.html'">LangLearn</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="lessons.html" class="active">Lessons</a></li>
+            <li><a href="flashcards.html">Flashcards</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="leaderboard.html">Leaderboard</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn btn-outline" onclick="location.href='login.html'">Login</button>
+            <button class="btn btn-solid" onclick="location.href='signup.html'">Sign Up</button>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Language Selection -->
+        <section class="language-selection">
+            <h2>Choose Your Language</h2>
+            <div class="language-grid">
+                <div class="language-card" onclick="selectLanguage('spanish')">
+                    <img src="../assets/flags/spain.png" alt="Spanish">
+                    <h3>Spanish</h3>
+                    <p>Most popular</p>
+                </div>
+                <div class="language-card" onclick="selectLanguage('french')">
+                    <img src="../assets/flags/france.png" alt="French">
+                    <h3>French</h3>
+                    <p>Beginner friendly</p>
+                </div>
+                <div class="language-card" onclick="selectLanguage('german')">
+                    <img src="../assets/flags/germany.png" alt="German">
+                    <h3>German</h3>
+                    <p>Intermediate</p>
+                </div>
+                <div class="language-card" onclick="selectLanguage('japanese')">
+                    <img src="../assets/flags/japan.png" alt="Japanese">
+                    <h3>Japanese</h3>
+                    <p>Advanced</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Progress -->
+        <section class="course-progress">
+            <div class="progress-header">
+                <h2>Your Progress</h2>
+                <div class="progress-stats">
+                    <div class="stat">
+                        <i class="fas fa-book-open"></i>
+                        <span>12 Lessons Completed</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-clock"></i>
+                        <span>8 Hours Learning</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-star"></i>
+                        <span>240 Points Earned</span>
+                    </div>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" style="width: 45%"></div>
+            </div>
+        </section>
+
+        <!-- Lesson Modules -->
+        <section class="lesson-modules">
+            <h2>Lesson Modules</h2>
+            <div class="module-grid">
+                <!-- Module 1 -->
+                <div class="module-card completed">
+                    <div class="module-header">
+                        <h3>Module 1: Basics</h3>
+                        <span class="badge">Completed</span>
+                    </div>
+                    <div class="lessons-list">
+                        <div class="lesson completed">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Greetings and Introductions</span>
+                        </div>
+                        <div class="lesson completed">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Numbers and Counting</span>
+                        </div>
+                        <div class="lesson completed">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Common Phrases</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="module-card in-progress">
+                    <div class="module-header">
+                        <h3>Module 2: Daily Life</h3>
+                        <span class="badge">In Progress</span>
+                    </div>
+                    <div class="lessons-list">
+                        <div class="lesson completed">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Food and Dining</span>
+                        </div>
+                        <div class="lesson active">
+                            <i class="fas fa-play-circle"></i>
+                            <span>Shopping and Money</span>
+                        </div>
+                        <div class="lesson">
+                            <i class="fas fa-circle"></i>
+                            <span>Transportation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="module-card locked">
+                    <div class="module-header">
+                        <h3>Module 3: Conversation</h3>
+                        <span class="badge">Locked</span>
+                    </div>
+                    <div class="lessons-list">
+                        <div class="lesson locked">
+                            <i class="fas fa-lock"></i>
+                            <span>Making Friends</span>
+                        </div>
+                        <div class="lesson locked">
+                            <i class="fas fa-lock"></i>
+                            <span>Expressing Opinions</span>
+                        </div>
+                        <div class="lesson locked">
+                            <i class="fas fa-lock"></i>
+                            <span>Cultural Etiquette</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/lessons.js"></script>
+</body>
+</html> 

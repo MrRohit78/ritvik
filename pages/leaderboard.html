@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard - LangLearn</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/leaderboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand" onclick="location.href='../index.html'">LangLearn</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="lessons.html">Lessons</a></li>
+            <li><a href="flashcards.html">Flashcards</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn btn-outline" onclick="location.href='login.html'">Login</button>
+            <button class="btn btn-solid" onclick="location.href='signup.html'">Sign Up</button>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Leaderboard Header -->
+        <section class="leaderboard-header">
+            <h2>Global Leaderboard</h2>
+            <div class="time-filters">
+                <button class="btn btn-outline active" onclick="filterLeaderboard('daily')">Daily</button>
+                <button class="btn btn-outline" onclick="filterLeaderboard('weekly')">Weekly</button>
+                <button class="btn btn-outline" onclick="filterLeaderboard('monthly')">Monthly</button>
+                <button class="btn btn-outline" onclick="filterLeaderboard('all-time')">All Time</button>
+            </div>
+        </section>
+
+        <!-- Top 3 Users -->
+        <section class="top-users">
+            <div class="top-user second">
+                <div class="rank">2</div>
+                <div class="user-info">
+                    <img src="../assets/avatars/default.png" alt="User avatar" class="avatar">
+                    <span class="username">User2</span>
+                    <span class="points">2,500 points</span>
+                </div>
+            </div>
+            <div class="top-user first">
+                <div class="rank">1</div>
+                <div class="user-info">
+                    <img src="../assets/avatars/default.png" alt="User avatar" class="avatar">
+                    <span class="username">User1</span>
+                    <span class="points">3,000 points</span>
+                </div>
+            </div>
+            <div class="top-user third">
+                <div class="rank">3</div>
+                <div class="user-info">
+                    <img src="../assets/avatars/default.png" alt="User avatar" class="avatar">
+                    <span class="username">User3</span>
+                    <span class="points">2,000 points</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leaderboard List -->
+        <section class="leaderboard-list">
+            <div class="list-header">
+                <div class="rank-col">Rank</div>
+                <div class="user-col">User</div>
+                <div class="points-col">Points</div>
+                <div class="level-col">Level</div>
+            </div>
+            <div class="user-list">
+                <!-- Users will be dynamically populated -->
+            </div>
+        </section>
+
+        <!-- User Stats -->
+        <section class="user-stats">
+            <h3>Your Statistics</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-star"></i>
+                    <div class="stat-info">
+                        <span class="stat-value">1,500</span>
+                        <span class="stat-label">Total Points</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-trophy"></i>
+                    <div class="stat-info">
+                        <span class="stat-value">#42</span>
+                        <span class="stat-label">Global Rank</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-level-up-alt"></i>
+                    <div class="stat-info">
+                        <span class="stat-value">Level 5</span>
+                        <span class="stat-label">Current Level</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-medal"></i>
+                    <div class="stat-info">
+                        <span class="stat-value">3</span>
+                        <span class="stat-label">Achievements</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section class="achievements">
+            <h3>Your Achievements</h3>
+            <div class="achievements-grid">
+                <!-- Achievements will be dynamically populated -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/leaderboard.js"></script>
+</body>
+</html> 

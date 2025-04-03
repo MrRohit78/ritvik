@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - LangLearn</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand" onclick="location.href='../index.html'">LangLearn</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="lessons.html">Lessons</a></li>
+            <li><a href="flashcards.html">Flashcards</a></li>
+            <li><a href="quiz.html" class="active">Quiz</a></li>
+            <li><a href="leaderboard.html">Leaderboard</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn btn-outline" onclick="location.href='login.html'">Login</button>
+            <button class="btn btn-solid" onclick="location.href='signup.html'">Sign Up</button>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Quiz Selection -->
+        <section class="quiz-selection">
+            <div class="section-header">
+                <h2>Available Quizzes</h2>
+                <div class="quiz-filters">
+                    <select id="languageFilter" onchange="filterQuizzes()">
+                        <option value="">All Languages</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="french">French</option>
+                        <option value="german">German</option>
+                        <option value="japanese">Japanese</option>
+                    </select>
+                    <select id="difficultyFilter" onchange="filterQuizzes()">
+                        <option value="">All Difficulties</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="quiz-grid">
+                <!-- Quizzes will be dynamically populated -->
+            </div>
+        </section>
+
+        <!-- Quiz Interface (hidden by default) -->
+        <section class="quiz-interface" style="display: none;">
+            <div class="quiz-header">
+                <button class="btn btn-outline" onclick="exitQuiz()">
+                    <i class="fas fa-arrow-left"></i> Exit Quiz
+                </button>
+                <div class="quiz-progress">
+                    <span id="questionProgress">Question 1/10</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 10%"></div>
+                    </div>
+                </div>
+                <div class="quiz-timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="timer">00:00</span>
+                </div>
+            </div>
+
+            <div class="question-container">
+                <h3 id="questionText">Question text goes here</h3>
+                <div class="options-grid" id="optionsContainer">
+                    <!-- Options will be dynamically populated -->
+                </div>
+            </div>
+
+            <div class="quiz-controls">
+                <button class="btn btn-primary" id="nextButton" onclick="nextQuestion()" disabled>
+                    Next Question
+                </button>
+            </div>
+        </section>
+
+        <!-- Quiz Results (hidden by default) -->
+        <section class="quiz-results" style="display: none;">
+            <div class="results-card">
+                <h2>Quiz Complete!</h2>
+                <div class="score-circle">
+                    <span id="scorePercentage">85%</span>
+                </div>
+                <div class="results-stats">
+                    <div class="stat">
+                        <i class="fas fa-check"></i>
+                        <span id="correctAnswers">8 Correct</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-times"></i>
+                        <span id="wrongAnswers">2 Wrong</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-clock"></i>
+                        <span id="timeTaken">2:45</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-star"></i>
+                        <span id="pointsEarned">150 Points</span>
+                    </div>
+                </div>
+                <div class="results-actions">
+                    <button class="btn btn-outline" onclick="reviewQuiz()">
+                        Review Answers
+                    </button>
+                    <button class="btn btn-primary" onclick="exitQuiz()">
+                        Back to Quizzes
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/quiz.js"></script>
+</body>
+</html> 

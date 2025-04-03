@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LangLearn - Language Learning Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">LangLearn</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="pages/lessons.html">Lessons</a></li>
+            <li><a href="pages/flashcards.html">Flashcards</a></li>
+            <li><a href="pages/quiz.html">Quiz</a></li>
+            <li><a href="pages/leaderboard.html">Leaderboard</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn btn-outline" onclick="location.href='pages/login.html'">Login</button>
+            <button class="btn btn-solid" onclick="location.href='pages/signup.html'">Sign Up</button>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Master Any Language with LangLearn</h1>
+            <p>Join thousands of learners worldwide and start your language learning journey today with our interactive lessons, quizzes, and AI-powered assistance</p>
+            <button class="btn btn-primary btn-large" onclick="location.href='pages/lessons.html'">
+                <i class="fas fa-rocket"></i> Start Learning Now
+            </button>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="feature-card">
+                <i class="fas fa-book-reader feature-icon"></i>
+                <h3>Interactive Lessons</h3>
+                <p>Learn at your own pace with our engaging, interactive lessons designed by language experts</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-gamepad feature-icon"></i>
+                <h3>Fun Quizzes</h3>
+                <p>Test your knowledge with interactive quizzes and track your progress in real-time</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-robot feature-icon"></i>
+                <h3>AI Chatbot</h3>
+                <p>Practice conversations and get instant help from our intelligent language assistant</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-brain feature-icon"></i>
+                <h3>Smart Flashcards</h3>
+                <p>Master vocabulary and grammar with our adaptive flashcard system</p>
+            </div>
+        </section>
+
+        <!-- Language Showcase -->
+        <section class="language-showcase">
+            <h2>Available Languages</h2>
+            <div class="language-grid">
+                <div class="language-item">
+                    <img src="assets/images/spanish.jpg" alt="Spanish" class="language-icon">
+                    <span class="language-name">Spanish</span>
+                </div>
+                <div class="language-item">
+                    <img src="assets/images/french.jpg" alt="French" class="language-icon">
+                    <span class="language-name">French</span>
+                </div>
+                <div class="language-item">
+                    <img src="assets/images/german.jpg" alt="German" class="language-icon">
+                    <span class="language-name">German</span>
+                </div>
+                <div class="language-item">
+                    <img src="assets/images/italian.jpg" alt="Italian" class="language-icon">
+                    <span class="language-name">Italian</span>
+                </div>
+                <div class="language-item">
+                    <img src="assets/images/chinese.jpg" alt="Chinese" class="language-icon">
+                    <span class="language-name">Chinese</span>
+                </div>
+                <div class="language-item">
+                    <img src="assets/images/japanese.jpg" alt="Japanese" class="language-icon">
+                    <span class="language-name">Japanese</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <h2>Ready to Start Your Journey?</h2>
+            <p>Join our community of language learners and achieve your goals</p>
+            <div class="cta-buttons">
+                <button class="btn btn-white btn-large" onclick="location.href='pages/signup.html'">
+                    <i class="fas fa-user-plus"></i> Sign Up Free
+                </button>
+                <button class="btn btn-outline btn-large" style="color: white; border-color: white;" onclick="location.href='pages/lessons.html'">
+                    <i class="fas fa-book"></i> Browse Lessons
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chatbot -->
+    <div class="chatbot" id="chatbot">
+        <div class="chatbot-toggle" onclick="toggleChat()">
+            <i class="fas fa-robot"></i>
+            <span id="chatbot-toggle-text">Need Help?</span>
+        </div>
+        <div class="chatbot-container" id="chatbot-container">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <i class="fas fa-robot"></i>
+                    Language Assistant
+                </div>
+                <button class="chatbot-close" onclick="toggleChat()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages"></div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbot-input-field" placeholder="Ask me anything...">
+                <button onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/navbar.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html> 
